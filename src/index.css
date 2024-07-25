@@ -1,13 +1,125 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #ececec;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+/* scrollbar styling */
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 50%;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: red;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #b30000;
+}
+
+.select-search-container {
+  width: 100% !important;
+}
+
+.select-search-input {
+  border: 0 !important;
+}
+
+[type="date"] {
+  background: #fff url() 97% 50% no-repeat;
+  /* height: 38px !important; */
+}
+[type="date"]::-webkit-inner-spin-button {
+  display: none;
+}
+[type="date"]::-webkit-calendar-picker-indicator {
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  z-index: 0;
+}
+
+[type="month"] {
+  background: #fff url() 97% 50% no-repeat;
+  height: 38px !important;
+}
+[type="month"]::-webkit-inner-spin-button {
+  display: none;
+}
+[type="month"]::-webkit-calendar-picker-indicator {
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  z-index: 0;
+}
+
+/* custom styles */
+
+label {
+  display: block;
+}
+
+input[type="date"] {
+  border-bottom: 1px solid #c4c4c4;
+  border-left: 0 !important;
+  border-right: 0 !important;
+  border-top: 0 !important;
+  background-color: #fff;
+  padding: 3px 5px;
+}
+
+input[type="month"] {
+  border: 1px solid #c4c4c4;
+
+  background-color: #fff;
+  padding: 3px 5px;
+}
+
+input[type="file"] {
+  border: 1px solid #c4c4c4;
+  background-color: #fff;
+  padding: 0 0;
+
+  width: 250px;
+  height: 32px;
+}
+
+input[type="file"]::-webkit-file-upload-button {
+  height: 30px;
+  background-color: #eceeef;
+  border: none;
+  border-right: 1px solid #eceeef;
+}
+
+/* scrollbar styling end */
+
+.bg-morphism {
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4.5px);
+  -webkit-backdrop-filter: blur(4.5px);
+  /* border-radius: 10px; */
+  border: 1px solid rgba(255, 255, 255, 0.18);
 }
